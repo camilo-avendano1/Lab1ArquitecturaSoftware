@@ -5,9 +5,11 @@
 package com.udea.ejb;
 
 import com.udea.models.Vehicles;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -26,6 +28,11 @@ public class VehiclesFacade extends AbstractFacade<Vehicles> implements Vehicles
 
     public VehiclesFacade() {
         super(Vehicles.class);
+    }
+    
+    public List<Vehicles> getAllVehicles() { 
+        Query query = em.createNamedQuery("Vehicles.findAll");
+        return query.getResultList();
     }
     
 }
