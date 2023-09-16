@@ -29,5 +29,17 @@
         <managed-bean-class>com.udea.controller.VehicleBean.java</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
+    <managed-bean>
+        <managed-bean-name>captcha</managed-bean-name>
+        <managed-bean-class>com.udea.controller.Captcha.java</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <application>
+        <resource-bundle>
+            <base-name>com.udea.pagos.web.properties.mesagges</base-name>
+            <var>msg</var>
+        </resource-bundle>
+    </application>
     
 </faces-config>
